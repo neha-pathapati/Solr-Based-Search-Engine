@@ -15,12 +15,12 @@ public class NetworkGraphCreator {
         HashMap<String,String> urlFileMap = new HashMap<String,String>();
   
         try {
-        	    br = new BufferedReader(new FileReader(BG_csv));
-        	    while ((line = br.readLine()) != null) 
-        	    {
-	             String[] line_split = line.split(",");
-	             fileUrlMap.put(line_split[0], line_split[1]);
-	             urlFileMap.put(line_split[1], line_split[0]);
+            br = new BufferedReader(new FileReader(BG_csv));
+            while ((line = br.readLine()) != null) 
+            {
+                String[] line_split = line.split(",");
+                fileUrlMap.put(line_split[0], line_split[1]);
+                urlFileMap.put(line_split[1], line_split[0]);
 	        }
 	    }
 	    catch (Exception e) {
@@ -53,7 +53,7 @@ public class NetworkGraphCreator {
 		int count = 0;
         for(String edge : edges)
         {
-        	    System.out.println("Edge " + count + " " + edge);
+            System.out.println("Edge " + count + " " + edge);
             edge_list.append(edge + "\n");
             count++;
         }
